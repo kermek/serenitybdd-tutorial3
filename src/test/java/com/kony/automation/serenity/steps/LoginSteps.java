@@ -5,6 +5,7 @@ import com.kony.automation.serenity.pages.FrmMain;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.junit.Assert;
 
 public class LoginSteps {
     FrmLogin frmLogin;
@@ -32,6 +33,7 @@ public class LoginSteps {
 
     @Then("they should be on main page")
     public void thenTheyShouldBeOnMainPage() {
-        frmMain.isDisplayed();
+        Assert.assertTrue("Main menu is not displayed", frmMain.isDisplayed());
+        frmMain.close();
     }
 }

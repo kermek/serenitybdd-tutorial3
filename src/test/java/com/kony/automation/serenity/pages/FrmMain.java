@@ -32,7 +32,15 @@ public class FrmMain extends PageObject {
 		super(driver);
 	}
 
+	public void goToFrm1() {
+		this.lbl_frm1.click();
+	}
+
 	public boolean isDisplayed() {
 		return (this.lblPostLogin.isDisplayed());
+	}
+
+	public void close() {
+		this.getDriver().close();
 	}
 }
