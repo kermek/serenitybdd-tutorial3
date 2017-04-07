@@ -10,22 +10,22 @@ public class FrmMain extends PageObject {
 	@FindBy(id = "lblPostLogin")
 	private WebElement lblPostLogin;
 
-	@FindBy(name = "Go to frm1")
+	@FindBy(id = "btnGoToFrm1")
 	public WebElement lbl_frm1;
 
-	@FindBy(name = "Go to frm2")
+	@FindBy(id = "btnGoToFrm2")
 	public WebElement lbl_frm2;
 
-	@FindBy(name = "Go to frm3")
+	@FindBy(id = "btnGoToFrm3")
 	public WebElement lbl_frm3;
 
-	@FindBy(name = "Go to frm4")
+	@FindBy(id = "btnGoToFrm4")
 	public WebElement lbl_frm4;
 
-	@FindBy(name = "Go to frm5")
+	@FindBy(id = "btnGoToFrm5")
 	public WebElement lbl_frm5;
 
-	@FindBy(name = "Go to frmLogout")
+	@FindBy(id = "btnGoToFrmLogout")
 	public WebElement lbl_frmLogout;
 
 	public FrmMain(WebDriver driver) {
@@ -41,6 +41,6 @@ public class FrmMain extends PageObject {
 	}
 
 	public void close() {
-		this.getDriver().close();
+		this.getDriver().quit();
 	}
 }
